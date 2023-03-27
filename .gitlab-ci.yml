@@ -1,0 +1,29 @@
+stages:
+  - build
+  - test
+  - release
+  - deploy
+
+
+BuildDev:
+  stage: build
+  variables:
+    NODE_ENV: "development"
+  script:
+    - docker-compose build
+  tags:
+    - dev-web
+  only:
+    - develop
+
+DeployDev:
+  stage: deploy
+  variables:
+    NODE_ENV: "development"
+  script:
+    - docker-compose up -d --force-recreate
+  tags:
+    - dev-web
+  only:
+    - develop
+

@@ -1,0 +1,20 @@
+.flip-clock {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
+
+  .flip-countdown {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 500px) {
+    .flip-countdown.size-medium .flip-countdown-piece .flip-countdown-title {
+      font-size: 16px;
+    }
+
+    .flip-countdown.size-medium .flip-countdown-piece .flip-countdown-card .flip-countdown-card-sec {
+      font-size: 42px;
+    }
+  }
+}

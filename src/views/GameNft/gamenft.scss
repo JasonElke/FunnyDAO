@@ -1,0 +1,58 @@
+.game-nft-page {
+  font-family: Montserrat SemiBold;
+  color: #FFFFFF;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  .title-header {
+    text-transform: uppercase;
+    font-size: 32px;
+  }
+
+  .countdown {
+    margin-bottom: 20px;
+    font-size: 64px;
+    font-weight: 300;
+    color: #FFFFFF;
+  }
+
+  .box-body {
+    width: 100%;
+    max-width: 872px;
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .title {
+      background: linear-gradient(273.63deg, rgba(255, 255, 255, 0.1) 4.33%, #FFFFFF 36.82%, #FFFFFF 96.06%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      font-size: 72px;
+    }
+  }
+
+  @media only screen and (max-width: 959px) {
+    .countdown {
+      .ant-statistic-content {
+        font-size: 40px;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 50px;
+  }
+}

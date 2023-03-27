@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  user-web:
+    image: stisolutions/funnydao-frontend:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_ENV: $NODE_ENV
+    volumes:
+      - ./nginx/dev/app.conf:/etc/nginx/conf.d/app.conf
+    container_name: user_web
+    restart: unless-stopped
+    ports:
+      - "3001:80"
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
